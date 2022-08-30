@@ -2,13 +2,19 @@
 
 <h1>The Products</h1>
 
+
 <div id="products", class="card" style="background-image: url()">
   <% @products.each do |product| %>
-    <%= render @product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
+    <%= render product %>
+      <%# <%= link_to "Show this product", product %>
+      <a href="/products/id" class="button">
+       <div class="qube">
+         <div class="front">Here we go !</div>
+         <div class="back">See product</div>
+       </div>
+      </a>
   <% end %>
 </div>
+
 
 <%= link_to "New product", new_product_path %>
