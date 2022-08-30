@@ -1,0 +1,10 @@
+<h1>Edit this order</h1>
+<%= form_with model: @order do |f| %>
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.text_field :status, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary mt-3' %>
+
+<% end %>

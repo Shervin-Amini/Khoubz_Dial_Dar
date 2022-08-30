@@ -1,0 +1,14 @@
+<h1>Here is the product that you're looking for !</h1>
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items mb-4">
+    <h1><%= @product.name %></h1>
+    <h2><%= @product.price %></h2>
+    <%= link_to edit_product_path(@product), class: 'btn btn-light btn-sm border' do %>
+      <i class="fa fa-pencil"></i> Edit this product
+      <% end %>
+      <br>
+       <%= link_to product_path(@product), data: { turbo_method: :delete}, class: 'btn btn-light btn-sm border' do %>
+      <i class="fa fa-pencil"></i> Delete this product
+      <% end %>
+      <%# <%= link_to "Delete this product", product_path(@product), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this product?" }%>
+  </div>

@@ -1,0 +1,13 @@
+<h1>Here is a list of all the products :</h1>
+<br>
+<% @products.each do |product|%>
+<h1><%= product.name %></h1>
+<h3><%= product.price%></h3>
+<h2><%= product.description %></h2>
+<%= link_to "show product", product_path(product), class: 'btn btn-light btn-sm border' %>
+
+<br>
+<% end %>
+
+
+<%= link_to "add product", new_product_path, class: 'btn btn-light btn-sm border' %>
