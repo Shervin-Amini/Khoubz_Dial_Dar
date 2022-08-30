@@ -2,9 +2,9 @@
 
 <h1>The Products</h1>
 
-<div id="products">
+<div id="products", class="card" style="background-image: url()">
   <% @products.each do |product| %>
-    <%= render product %>
+    <%= render @product %>
     <p>
       <%= link_to "Show this product", product %>
     </p>
