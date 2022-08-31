@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_order, only: %i[ show edit update destroy ]
 
   # GET /orders or /orders.json
@@ -22,10 +23,13 @@ class OrdersController < ApplicationController
   # POST /orders or /orders.json
   def create
     @order = Order.new(order_params)
-    @product.buyer_id = current_user.id
+    @product = Product.find(params[:product_id])
+    if !current_user.is_seller
+      @product.buyer_id = current_user.id
+    end
     respond_to do |format|
       if @order.save
-        format.html { redirect_to order_url(@order), notice: "Order was successfully created." }
+        format.html { redirect_to product_order_path(@order), notice: "Order was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -60,6 +64,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:status, :user_id, :product_id)
+      params.require(:order).permit(:status)
     end
 end
