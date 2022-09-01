@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-50.times do 
-    Product.create(name: "Khobza", description: "Farine, sel, huile, oeuf", price: 4)
+p "starting seed"
+User.create(email: "seller@seller.com", name: "sellermail:mdp123456", phone_number: 0, password: "123456", is_seller: true)
+
+10.times do
+  Product.create(name: "Khobza", description: "Farine, sel, huile, oeuf", price: 4, seller_id: 3)
 end
+p "seeding end"
