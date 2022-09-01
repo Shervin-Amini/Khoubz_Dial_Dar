@@ -48,7 +48,6 @@
   h1 {
     font-size: 90px !important;
     font-family: 'Bebas Neue', cursive;
-    margin: 150px 0px;
   }
 
   .numbers {
@@ -137,11 +136,11 @@
     background-position: center;
   }
 
-  .section {
-    margin-top: 250px;
+ .section {
+    margin-top: 150px;
     height: 250px;
     position: relative;
-  }
+  } 
   
   .carousel-section {
     margin-bottom: 250px;
@@ -157,7 +156,7 @@
 
   .carousel-bottom {
     width: 800px;
-    height: 348px;
+    height: 400px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
     display: inline-block;
