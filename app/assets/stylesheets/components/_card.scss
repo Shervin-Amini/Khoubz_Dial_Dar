@@ -16,8 +16,6 @@
   }
 
   .card-trip {
-    margin: 80px 20px;
-    width: 800px;
     height: 348px;
     overflow: hidden;
     background: white;
@@ -43,17 +41,15 @@
     text-align: center;
     font-size: 16px;
     opacity: .7;
-    margin: 0;
-    padding: 16px
   }
 
 
   .card-trip .card-trip-infos {
-    padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
+    padding-top: 1em;
   }
 
   .card-trip-infos .card-trip-user {
@@ -63,4 +59,7 @@
     width: 40px;
   }
 
-  
+  .card-trip-pricing {
+    padding-bottom: 50px;
+
+  }

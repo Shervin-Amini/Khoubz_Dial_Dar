@@ -5,6 +5,8 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all
+    @users = User.all
+    #@username = User.find(@product.seller_id).name
   end
 
   # GET /products/1 or /products/1.json
