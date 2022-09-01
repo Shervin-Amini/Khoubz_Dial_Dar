@@ -18,11 +18,20 @@
   .card-trip {
     margin: 80px 20px;
     width: 800px;
+    height: 348px;
     overflow: hidden;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
+
+  .card-trip:first-child {
+    margin-left: 0px;
+  }
   
+  .card-trip:last-child {
+    margin-right: -2px;
+  }
+
   .card-trip > img {
     height: 200px;
     width: 100%;
@@ -30,15 +39,19 @@
   }
   
   .card-trip h2 {
-    font-size: 16px;
+    padding: 16px;
+    font-size: 21px;
+    text-align: center;
     font-weight: bold;
     margin: 0;
   }
   
   .card-trip p {
-    font-size: 12px;
+    text-align: center;
+    font-size: 16px;
     opacity: .7;
     margin: 0;
+    padding: 16px
   }
   
   

@@ -1,9 +1,12 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .banner {
     background-size: cover;
     background-position: center;
     height: 100vh;
     padding: 150px 0;
+    margin-bottom: 100px;
   }
   
   .banner h1 {
@@ -21,3 +24,209 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
   
+  .navbar-lewagon-transparent {
+    color: #E67E22 !important;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: space-between;
+    background-color: transparent;
+    transition: 0.5s background-color ease;
+  }
+  
+  .navbar-lewagon-transparent .navbar-collapse {
+    flex-grow: 0;
+  }
+  
+  .navbar-lewagon-transparent .navbar-brand img {
+    width: 40px;
+  }
+  
+  .navbar-lewagon-white {
+    background-color: white;
+  }
+
+  h1 {
+    font-size: 90px !important;
+    font-family: 'Bebas Neue', cursive;
+    margin: 150px 0px;
+  }
+
+  .numbers {
+    font-size: 110px !important;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+  }
+
+  // .numbers:first-child{
+  //   top: 100px;
+  //   right: 100px;
+  // }
+
+  // .numbers:last-child{
+  //   bottom: 50px;
+  //   right: 50px;
+  // }
+
+  .numbers-title{
+    font-size: 110px !important;
+    font-family: 'Bebas Neue', cursive;
+    position: absolute;
+  }
+
+  .yellow-txt {
+    color: #E67E22;
+  }
+
+  .blue-txt {
+    color: #2A4F96;
+  }
+
+  .numbers-title:first-child{
+    top: -120px;
+    right: 100px;
+  }
+
+  .proposition-value {
+    height: 200px;
+    margin-top: 100px;
+  }
+
+  .underline {
+    text-decoration: underline;
+    text-decoration-color: #E67E22;
+  }
+
+  .secondary-sentence {
+    margin-left: 200px;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .tile {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .vector-container {
+    margin: 80px 20px;
+    width: 800px;
+    height: 348px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -200px;
+  }
+
+  .vector-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .cards-home {
+    margin: 100px 0px;
+    background-size: auto;
+    background-position: center;
+  }
+
+  .section {
+    margin-top: 250px;
+    height: 250px;
+    position: relative;
+  }
+  
+  .carousel-section {
+    margin-bottom: 250px;
+  }
+
+  .yellow-bg {
+    background-color:#E67E22;
+  }
+
+  .blue-bg {
+    background-color: #2A4F96;
+  }
+
+  .carousel-bottom {
+    width: 800px;
+    height: 348px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+  .carousel-bottom > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+//Copy paste testimonial code 
+
+  .home-testimonial{
+    background-color: #E67E22;
+    height: 380px
+  }
+  
+  .home-testimonial-bottom{
+    background-color: #eaa161;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    height: 130px;
+    top: 190px
+  }
+    
+    .home-testimonial h3{
+      color: var(--orange);
+      font-size: 14px;font-weight: 500;
+      text-transform: uppercase
+    }
+    .home-testimonial h2{color: white;font-size: 28px;
+      font-weight: 700
+    }
+    .testimonial-inner{
+      position: relative;
+      top: -174px
+    }
+    .testimonial-pos{
+      position: relative;
+      top: 24px
+    }
+    .testimonial-inner .tour-desc{
+      border-radius: 5px;padding: 40px
+    }
+    .color-grey-3{
+      font-family: "Montserrat", Sans-serif;
+      font-size: 14px;color: #6c83a2
+    }
+    .testimonial-inner img.tm-people{
+      width: 60px;
+      height: 60px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      max-width: none
+    }
+    .link-name{
+      font-family: "Montserrat", Sans-serif;
+      font-size: 14px;
+      color: #6c83a2
+    }
+    .link-position{
+      font-family: "Montserrat", Sans-serif;
+      font-size: 12px;
+      color: #6c83a2
+    }
