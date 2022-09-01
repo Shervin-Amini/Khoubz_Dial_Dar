@@ -1,8 +1,4 @@
-<%# <div id="<%= dom_id product %>
-  <%# <p>
-    <strong>Name:</strong>
-    <%= product.name %>
-  <%# </p> %>
+
 
       <div class="card-trip">
   <img src="https://images.unsplash.com/photo-1530548091131-36336084c705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
@@ -12,23 +8,19 @@
       <p><%= product.description %></p>
     </div>
     <h2 class="card-trip-pricing"> <%= product.price %></h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-  </div>
-</div>
 
-  <%# <p>
-    <strong>Description:</strong>
-    <%= product.description %>
-  <%# </p>
+<div id="<%= dom_id product %>">
+  
+  <div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><strong><%= product.name %></strong></h2>
+      <p><strong><%= product.seller.name %></strong>: <%= product.description %></p>
+    </div>
+    <h2 class="card-trip-pricing">MAD <%= product.price %></h2>
+    <h2>
+      <%= link_to "Show this product", product %>
+    </h2>
 
-  <p>
-    <strong>Price:</strong>
-    <%= product.price %>
-  <%# </p> %>
-<%#
-  <p>
-    <strong>Seller:</strong>
-    <%= product.seller.name %>
-  <%# </p>
 
-</div> %>
