@@ -1,24 +1,27 @@
 
 <div class="container">
   <p style="color: green"><%= notice %></p>
-  <h1>The Products</h1>
+  <div class="d-flex justify-content-around mb-5">
+      <h1>Liste de produits</h1>
+      <%= link_to " + produit", new_product_path , class:"btn-flat-sm-i text-decoration-none align-self-center" %>
+    </div>
     <div class="grid">
       <% @products.each do |product| %>
         <div class="products" >
           <div class="button">
             <%= link_to product_path(product) do %>
               <div class="qube">
-                <div class="front">Here we go !</div>
-                <div class="back">See product</div>
+                <div class="front">Let's go!</div>
+                <div class="back">Voir le produit</div>
               </div>
             <% end %>
           </div>
             <div class="card-trip">
               <%# <img src="https://images.unsplash.com/photo-1530548091131-36336084c705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" /> %>
-              <%# <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" > %>
+              <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" >
               <%# <img src="https://images.unsplash.com/photo-1586765501019-cbe3973ef8fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80" > %>
               <%# <img src="https://images.unsplash.com/photo-1579385935211-45b8cfdda570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" > %>
-              <img src="https://images.unsplash.com/photo-1592029780368-c1fff15bcfd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc0fHxicmVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60">
+              <%# <img src="https://images.unsplash.com/photo-1592029780368-c1fff15bcfd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc0fHxicmVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60"> %>
               <div class="card-trip-infos">
                   <img src="https://kitt.lewagon.com/placeholder/users/Omayma1711" class="card-trip-user avatar-bordered" />
               </div>
@@ -26,10 +29,9 @@
                   <p><%= product.name %></p>
                   <p>Faite avec soin par <%= @users.find(product.seller_id).name %></p>
                 </div>
-                <p class="card-trip-pricing">MAD <%= product.price %></p>
+                <p class="card-trip-pricing"><%= product.price %> MAD</p>
             </div>
         </div>
       <% end %>
     </div>
-  <%= link_to "New product", new_product_path %>
 </div>
