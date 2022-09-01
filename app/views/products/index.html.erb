@@ -1,13 +1,22 @@
-<p style="color: green"><%= notice %></p>
-<%# <div class="container" > %>
-  <div class="d-flex justify-content-around" >
-    <div id="products", class="card" style="background-image: url()">
-    <% @products.each do |product| %>
-      <%= render product %>
-    <% end %>
+
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <h1>The Products</h1>
+  <div class="row">
+    <div class="col-md-auto">
+      <% @products.each do |product| %>
+        <div class="products" >
+          <%= render product %>
+            <div class="button">
+              <%= link_to product_path(product) do %>
+                <div class="qube">
+                  <div class="front">Here we go !</div>
+                  <div class="back">See product</div>
+                </div>
+              <% end %>
+            </div>
+      <% end %>
     </div>
   </div>
-<%# </div> %>
-
-
-<%= link_to "New product", new_product_path %>
+  <%= link_to "New product", new_product_path %>
+</div>

@@ -7,8 +7,12 @@
 <div id="orders">
   <% @orders.each do |order| %>
     <%= render("order", order: order)  %>
-    <p>
-      <%= link_to "Show this order", order %>
+    <div>
+     <a href="#http://localhost:3000/products/1" class="button">
+      <div class="qube">
+         <div class="front">now click!</div>
+         <div class="back">mouse over me!</div>
+      </div>
     </p>
   <% end %>
 </div>
