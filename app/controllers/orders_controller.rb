@@ -4,6 +4,8 @@ class OrdersController < ApplicationController
   # GET /orders or /orders.json
   def index
     @orders = Order.all
+    @users = User.all
+    @products = Product.all
   end
 
   # GET /orders/1 or /orders/1.json
@@ -12,6 +14,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    
     @order = Order.new
   end
 
@@ -23,12 +26,13 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @product = Product.find(params[:product_id])
-    if !current_user.is_seller
-      @product.buyer_id = current_user.id
-    end
+  
+    @order.product_id = @product.id
+      @order.buyer_id = current_user.id
+
     respond_to do |format|
       if @order.save
-        format.html { redirect_to product_order_path(@order), notice: "Order was successfully created." }
+        format.html { redirect_to orders_path, notice: "Order was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end

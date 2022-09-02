@@ -58,8 +58,8 @@
       </form> %>
   </div>
 </div>
-<%# cards %>
-<div class = "container">
+<%# cards %> 
+<div>
     <div class="cards-home d-flex justify-content-around" style="background-image: url(<%= asset_path 'tile.png', :size => "50x20" %>);">
 
       <div class="card-trip">
@@ -84,27 +84,30 @@
 
 </div> 
 
-<div class="yellow-bg section">
-  <h2 class="numbers-title yellow-txt">Users</h2>
-  <div class="container">
-    <div class="vector-container">
-      <%= image_tag asset_path 'community vector.jpg', class: "w-50"%>
+<section class="my-5">
+  <div class="yellow-bg section">
+    <h2 class="numbers-title yellow-txt">Users</h2>
+    <div>
+      <div class="vector-container">
+        <%= image_tag asset_path 'community vector.jpg', class: "w-50"%>
+      </div>
     </div>
+    <h2 class="numbers">6 000 000</h2>  
   </div>
-  <h2 class="numbers">6 000 000</h2>  
-</div>
 
-<div class="blue-bg section">
-   <h2 class="numbers-title blue-txt">Transactions</h2>
-  <div class="container">
-    <div class="vector-container">
-      <%= image_tag asset_path 'order food.jpg', class: "w-50"%>
+  <div class="blue-bg section">
+    <h2 class="numbers-title blue-txt">Transactions</h2>
+    <div>
+      <div class="vector-container">
+        <%= image_tag asset_path 'order food.jpg', class: "w-50"%>
+      </div>
     </div>
+    <h2 class="numbers">120 000</h2>
   </div>
-  <h2 class="numbers">120 000</h2>
-</div>
+</section>
+  
 
-<div class="container">
+<div class="container-carousel">
   <div class="section carousel-section">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">

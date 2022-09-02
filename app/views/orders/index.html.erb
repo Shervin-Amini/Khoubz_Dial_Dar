@@ -1,20 +1,14 @@
+
+
+<div class="container" >
 <p style="color: green"><%= notice %></p>
-
-<h1>Orders</h1>
-
-
-
-<div id="orders">
-  <% @orders.each do |order| %>
-    <%= render("order", order: order)  %>
     <div>
-     <a href="#http://localhost:3000/products/1" class="button">
-      <div class="qube">
-         <div class="front">now click!</div>
-         <div class="back">mouse over me!</div>
-      </div>
-    </p>
-  <% end %>
-</div>
+    <strong><p class="text-center">Your orders :</p></strong>
+    <% @orders.each do |order| %>
+    <div >
+      <%= render("order", order: order)  %>
+    </div>
+    <% end %>
+    </div>
 
-<%# <%= link_to "New order", new_product_order_path() %>
+</div>
