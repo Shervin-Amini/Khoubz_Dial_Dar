@@ -3,7 +3,6 @@
 <%= render @product %>
 <br>
 <br>
-
   <% if current_user%>  
     <% if @product.seller_id == current_user.id%>  
     <%= link_to "Edit this product", edit_product_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white" %> |
