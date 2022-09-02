@@ -1,6 +1,15 @@
 // Specific CSS for your home-page
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+body {
+  min-height: 100vh;
+  padding-bottom: 14%;
+  position: relative;
+  .container {
+    padding-top: 100px;
+  }
+}
+
 .banner {
     background-size: cover;
     background-position: center;
@@ -106,12 +115,6 @@
     position: relative;
   }
 
-  .tile {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
   .vector-container {
     margin: 80px 20px;
     width: 800px;
@@ -130,15 +133,10 @@
     object-fit: cover;
   }
 
-  .cards-home {
-    margin: 100px 0px;
-    background-size: auto;
-    background-position: center;
-  }
 
  .section {
-    margin-top: 150px;
     height: 250px;
+    margin-top: 20%;
     position: relative;
   } 
   
@@ -230,6 +228,25 @@
       color: #6c83a2
     }
 
-body .container {
-  padding-top: 100px;
+.container-home {
+  --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: 150px;
 }
+
+.magrid {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 15px 0px; 
+}
+
+.ma-design {
+  height: 500px;
+  width: 500px;
+}
+
