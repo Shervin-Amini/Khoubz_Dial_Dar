@@ -10,6 +10,6 @@ p "starting seed"
 User.create(email: "seller@seller.com", name: "sellermail:mdp123456", phone_number: 0, password: "123456", is_seller: true)
 
 10.times do
-  Product.create(name: "Khobza", description: "Farine, sel, huile, oeuf", price: 4, seller_id: 3)
+  Product.create(name: "Pain de mie", description: "Farine, sel, huile, oeuf", price: 4, seller_id: 3)
 end
 p "seeding end"

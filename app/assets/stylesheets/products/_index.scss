@@ -124,3 +124,17 @@ $font: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
     }
  }
 }
+
+
+.btn-flat-sm-i {
+  color: black;
+  font-size: 25px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: $pear;
+  transition: background 0.3s ease;
+}
+
+.btn-flat-sm-i:hover {
+  color: black;
+}
