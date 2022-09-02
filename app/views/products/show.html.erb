@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
-
+<div class='container my-5'>
 <%= render @product %>
 
-<div>
+
   <%= link_to "Edit this product", edit_product_path(@product) %> |
   <%= link_to "Back to products", products_path %>
   <%= link_to "Place an order", new_product_order_path(@product) %>
