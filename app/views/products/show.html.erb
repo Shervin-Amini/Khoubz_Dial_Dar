@@ -4,9 +4,18 @@
 <br>
 <br>
 
-  <%= link_to "Edit this product", edit_product_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center" %> |
-  <%= link_to "Back to products", products_path, class:"btn-flat-sm-i text-decoration-none align-self-center" %> |
-  <%= link_to "Place an order", new_product_order_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center" %>
+  <% if current_user%>  
+    <% if @product.seller_id == current_user.id%>  
+    <%= link_to "Edit this product", edit_product_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white" %> |
+    <% end %>
+  <% end %>
+  
+  <%= link_to "Back to products", products_path, class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white" %> |
+  <%= link_to "Place an order", new_product_order_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white" %>
   <br>
-  <%= button_to "Destroy this product", @product, method: :delete, class:"btn-flat-sm-i text-decoration-none align-self-center" %>
+  <% if current_user%>  
+    <% if @product.seller_id == current_user.id%>  
+    <%= button_to "Destroy this product", @product, method: :delete, class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white mt-5" %>
+    <% end %>
+  <% end %>
 </div>
