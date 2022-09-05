@@ -1,13 +1,19 @@
 // Specific CSS for your home-page
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+
+html {
+  height: 100%;
+}
+
 body {
-  min-height: 100vh;
-  padding-bottom: 14%;
+  min-height: 100%;
   position: relative;
   .container {
     padding-top: 100px;
   }
+  display: flex;
+  flex-direction: column;
 }
 
 .banner {
@@ -67,16 +73,6 @@ body {
     top: 60px;
     right: 100px;
   }
-
-  // .numbers:first-child{
-  //   top: 100px;
-  //   right: 100px;
-  // }
-
-  // .numbers:last-child{
-  //   bottom: 50px;
-  //   right: 50px;
-  // }
 
   .numbers-title{
     font-size: 110px !important;
