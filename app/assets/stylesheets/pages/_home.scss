@@ -17,7 +17,7 @@ body {
     padding: 150px 0;
     margin-bottom: 100px;
   }
-  
+
   .banner h1 {
     margin: 0;
     color: white;
@@ -25,14 +25,14 @@ body {
     font-size: 32px;
     font-weight: bold;
   }
-  
+
   .banner p {
     font-size: 20px;
     color: white;
     opacity: .7;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
-  
+
   .navbar-lewagon-transparent {
     color: #E67E22 !important;
     font-size: 18px;
@@ -41,21 +41,21 @@ body {
     background-color: transparent;
     transition: 0.5s background-color ease;
   }
-  
+
   .navbar-lewagon-transparent .navbar-collapse {
     flex-grow: 0;
   }
-  
+
   .navbar-lewagon-transparent .navbar-brand img {
     width: 40px;
   }
-  
+
   .navbar-lewagon-white {
     background-color: white;
   }
 
   h1 {
-    font-size: 90px !important;
+    font-size: 70px !important;
     font-family: 'Bebas Neue', cursive;
   }
 
@@ -138,8 +138,8 @@ body {
     height: 250px;
     margin-top: 20%;
     position: relative;
-  } 
-  
+  }
+
   .carousel-section {
     margin-bottom: 250px;
   }
@@ -168,13 +168,13 @@ body {
     object-fit: cover;
   }
 
-//Copy paste testimonial code 
+//Copy paste testimonial code
 
   .home-testimonial{
     background-color: #E67E22;
     height: 380px
   }
-  
+
   .home-testimonial-bottom{
     background-color: #eaa161;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
@@ -184,7 +184,7 @@ body {
     height: 130px;
     top: 190px
   }
-    
+
     .home-testimonial h3{
       color: var(--orange);
       font-size: 14px;font-weight: 500;
@@ -239,14 +239,13 @@ body {
 }
 
 .magrid {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 15px 0px; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 15px 0px;
 }
 
 .ma-design {
   height: 500px;
   width: 500px;
 }
-

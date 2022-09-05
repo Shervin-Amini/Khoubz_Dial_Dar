@@ -1,10 +1,16 @@
 
-
-<div class="card-product">
-  <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&" />
-  <div class="card-product-infos">
-    <h2><%=product.name %></h2>
-    <h3><%=product.price %> MAD</h3>
-    <p><%=product.description%></p>
+<div class="projcard-container">
+  <div class="projcard projcard-blue">
+    <div class="projcard-innerbox">
+      <img class="projcard-img" src="" />
+      <div class="projcard-textbox">
+        <div class="projcard-title"><h1><%= @product.name %></h1></div>
+        <div class="projcard-subtitle"><h2><%=@product.price %> MAD</h2></div>
+        <div class="projcard-bar"></div>
+        <br>
+        <div class="projcard-description"><%= @product.description %></div>
+        <div class="projcard-tagbox">
+        </div>
+      </div>
+    </div>
   </div>
-</div>
