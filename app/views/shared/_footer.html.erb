@@ -1,4 +1,4 @@
- <div class="footer">
+ <%# <div class="footer">
       <div class="footer-links">
         <a href="#"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -9,4 +9,39 @@
       <div class="footer-copyright">
         All Rights are reserved. Elements are subject to Copyright.
       </div>
-</div>
+</div> %>
+
+<footer>
+  <div class="row">
+    <div class="col">
+      <%# <%= image_tag( asset_path 'KHOBZ Logo.png', class:"logo") %> %>
+      <%= image_tag asset_path('KHOBZ Logo.png'), class:"logo" %>
+      <p>We, Khobz Dar, our mission is to empower anyone with a unique bread recipe to share his baked goods with the rest of the world.</p>
+    </div>
+    <div class="col">
+      <h3>Office</h3>
+      <p>Le Wagon Campus</p>
+      <p>HQ in Casablanca, Morocco</p>
+      <p>380 Bd Brahim Roudani</p>
+      <p class="email-id">contact@khobzdar.com</p>
+      <p>+212 669-046914</p>
+    </div>
+    <div class="col">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">About us</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">Contacts</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Newsletter</h3>
+      <form action="">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" placeholder="Enter your email id" required>
+      </form>
+    </div>
+  </div>
+</footer>
