@@ -7,45 +7,39 @@
     </div>
     <div class="grid">
       <% @products.each do |product| %>
-        <div class="products" >
-            <div class="card-trip">
-            <% case product.name %>
-                <% when "Baguette tradition" %>
-                  <img src="https://images.unsplash.com/photo-1586765501019-cbe3973ef8fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80">
-                <% when "Pain de mie" %>
-                  <img src="https://images.unsplash.com/photo-1592029780368-c1fff15bcfd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc0fHxicmVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60">
-                <% when "Pain bio" %>
-                  <img src="https://images.unsplash.com/photo-1579385935211-45b8cfdda570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80">
-                <% when "Pain moelleux" %>
-                <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
-                <% else %>
-                  <img src="https://images.unsplash.com/photo-1530548091131-36336084c705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-            <% end %>
-              <div class="card-trip-infos">
-                <% case @users.find(product.seller_id).name %>
-                <% when "Oumaima" %>
-                  <img src="https://kitt.lewagon.com/placeholder/users/Omayma1711" class="card-trip-user avatar-bordered" />
-                <% when "Adam" %>
-                  <img src="https://kitt.lewagon.com/placeholder/users/Adam-Aber" class="card-trip-user avatar-bordered" />
-                <% else %>
-                <img src="https://kitt.lewagon.com/placeholder/users/Shervin-Amini" class="card-trip-user avatar-bordered" />
-                <% end %>
-              </div>
-                <div class="d-flex flex-column">
-                  <p><%= product.name %></p>
-                  <p>Fait avec soin par <%= @users.find(product.seller_id).name %></p>
+        <%= link_to product_path(product) do %>
+        <%# added the line above so that the whole card becomes clickable %>
+          <div class="products" style="text-decoration:none" >
+              <div class="card-trip">
+              <% case product.name %>
+                  <% when "Baguette tradition" %>
+                    <img src="https://images.unsplash.com/photo-1586765501019-cbe3973ef8fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80">
+                  <% when "Pain de mie" %>
+                    <img src="https://images.unsplash.com/photo-1592029780368-c1fff15bcfd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc0fHxicmVhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60">
+                  <% when "Pain bio" %>
+                    <img src="https://images.unsplash.com/photo-1579385935211-45b8cfdda570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80">
+                  <% when "Pain moelleux" %>
+                  <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+                  <% else %>
+                    <img src="https://images.unsplash.com/photo-1530548091131-36336084c705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+              <% end %>
+                <div class="card-trip-infos">
+                  <% case @users.find(product.seller_id).name %>
+                  <% when "Oumaima" %>
+                    <img src="https://kitt.lewagon.com/placeholder/users/Omayma1711" class="card-trip-user avatar-bordered" />
+                  <% when "Adam" %>
+                    <img src="https://kitt.lewagon.com/placeholder/users/Adam-Aber" class="card-trip-user avatar-bordered" />
+                  <% else %>
+                  <img src="https://kitt.lewagon.com/placeholder/users/Shervin-Amini" class="card-trip-user avatar-bordered" />
+                  <% end %>
                 </div>
-                <p class="card-trip-pricing"><%= product.price %> MAD</p>
-            </div>
-            <div class="button">
-            <%= link_to product_path(product) do %>
-              <div class="qube">
-                <div class="front">Let's go!</div>
-                <div class="back">Voir le produit</div>
+                  <div class="d-flex flex-column">
+                    <p><h2><%= product.name %></h2></p>
+                    <p><%= product.price %> MAD</p>
+                  </div>
               </div>
-            <% end %>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
 </div>
