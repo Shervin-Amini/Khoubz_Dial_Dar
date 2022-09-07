@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-    
+
     @order = Order.new
   end
 
@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @product = Product.find(params[:product_id])
-  
+
     @order.product_id = @product.id
       @order.buyer_id = current_user.id
 
@@ -67,6 +67,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:status)
+      params.require(:order).permit(:status, :quantity, :customization_message)
     end
 end
