@@ -3,13 +3,14 @@
   <a class="fa-solid fa-arrow-left" href="http://localhost:3000/products" style="text-decoration:none; color:orange; family-font:'Open Sans'; font-weight:bold; font-size: medium; "> Liste de produits</a>
 <%= render "product" %>
 
+
   <% if current_user%>
     <% if @product.seller_id == current_user.id%>
-    <%= link_to "Modifier", edit_product_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white" %>
+    <%= link_to "Modifier", edit_recipe_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white" %>
     <% end %>
   <% end %>
 
-  <%= link_to "Ajouter au panier", new_product_order_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white" %>
+  <%= link_to "Commander", new_product_order_path(@product), class:"btn-flat-sm-i text-decoration-none align-self-center bg-warning text-white" %>
 
   <% if current_user%>
     <% if @product.seller_id == current_user.id%>

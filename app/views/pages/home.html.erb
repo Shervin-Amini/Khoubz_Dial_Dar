@@ -12,17 +12,15 @@
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
             <li class="nav-item active">
-              <%= link_to "Home", root_path, class: "text-warning pe-5 nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Messages", "#", class: "text-warning pe-5 nav-link" %>
+              <%= link_to "Home","http://localhost:3000", class: "text-warning pe-3 nav-link" %>
+              </li>
+              <li class="nav-item active">
+              <%= link_to "Notifications", "#", class: "text-warning pe-5 nav-link" %>
             </li>
             <li class="nav-item dropdown">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/Adam-Aber", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="gold-background dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Action", "#", class: "gold-background dropdown-item" %>
-                <%= link_to "Another action", "#", class: "gold-background dropdown-item" %>
-                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "gold-background dropdown-item" %>
+                <%= link_to "Mes recettes", "http://localhost:3000/mes-recettes", class: "gold-background dropdown-item" %>                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "gold-background dropdown-item" %>
               </div>
             </li>
           <% else %>
@@ -55,7 +53,7 @@
               <p>We connect you with homemade bread makers and their unique recipes</p>
             </div>
         </div>
-        
+
         <div class="ma-design" style="background-image: url('<%= asset_path("tile.png") %>');">
           <div class="card-trip">
             <%= image_tag asset_path 'handshake.jpg'%>
@@ -81,7 +79,7 @@
         <div class="vector-container">
           <%= image_tag asset_path 'community vector.jpg', class: "w-50"%>
         </div>
-      <h2 class="numbers">6 000 000</h2>  
+      <h2 class="numbers">6 000 000</h2>
     </div>
 
     <div class="blue-bg section">
@@ -173,7 +171,3 @@
                 </div>
         </section>
   </section>
-
-
-
-
