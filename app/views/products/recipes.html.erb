@@ -2,7 +2,7 @@
 <div class="container">
   <div class="d-flex justify-content-around mb-5">
       <h1>Mes recettes</h1>
-      <%= link_to " + produit", mes_recettes_url , class:"btn-flat-sm-i text-decoration-none align-self-center"%>
+      <%= link_to " + produit", new_recipe_url , class:"btn-flat-sm-i text-decoration-none align-self-center"%>
     </div>
     <div class="grid">
       <% @products.each do |product| %>
