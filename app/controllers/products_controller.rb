@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
     end
     respond_to do |format|
       if @product.save
-        format.html { redirect_to "http://localhost:3000/mes-recettes", notice: "Product was successfully created." }
+        format.html { redirect_to mes_recettes_path, notice: "Product was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -59,6 +59,10 @@ class ProductsController < ApplicationController
 
   def recipes
     @products = Product.all.where(seller_id: current_user.id)
+  end
+
+  def notifications
+    @products = Product.where(seller_id: current_user.id)
   end
 
   private

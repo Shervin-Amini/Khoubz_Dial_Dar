@@ -3,9 +3,10 @@ body {
   color: #333;
   font-size: 14px;
 }
-.projcard-container {
+ #show {
+ .projcard-container {
   margin: 50px 0;
-}
+ }
 
 /* Actual Code: */
 .projcard-container,
@@ -162,7 +163,6 @@ body {
   cursor: default;
   user-select: none;
   transition: color 0.2s;
+ }
+
 }
-
-
-

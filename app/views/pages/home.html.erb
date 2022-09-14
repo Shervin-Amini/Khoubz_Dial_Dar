@@ -15,7 +15,7 @@
               <%= link_to "Home","http://localhost:3000", class: "text-warning pe-3 nav-link" %>
               </li>
               <li class="nav-item active">
-              <%= link_to "Notifications", "#", class: "text-warning pe-5 nav-link" %>
+              <%= link_to "Notifications", "http://localhost:3000/mes-notifications", class: "text-warning pe-5 nav-link" %>
             </li>
             <li class="nav-item dropdown">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/Adam-Aber", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -32,7 +32,7 @@
       </div>
     </div>
   </div>
-  <div class="banner d-flex mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path  'banner.jpg' %>);">
+  <div class="banner d-flex mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path  'https://images.unsplash.com/photo-1533117307029-74a8b35848cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' %>);">
     <div class="container-home">
       <div class="proposition-value">
         <h1>Le pain <strong><span class="text-warning">le plus frais</span></strong> est <strong>prêt</strong>!</h1>
@@ -46,25 +46,25 @@
   <section>
       <div class="magrid ms-4">
 
-        <div class="ma-design" style="background-image: url('<%= asset_path("tile.png") %>');">
-          <div class="card-trip card-trip">
+        <div class="ma-design p-5" style="background-image: url('<%= asset_path("tile.png") %>');">
+          <div class="card-trip p-6">
               <%= image_tag asset_path 'authentic.jpg'%>
               <h2>Traditional Authentic Experience</h2>
               <p>We connect you with homemade bread makers and their unique recipes</p>
             </div>
         </div>
 
-        <div class="ma-design" style="background-image: url('<%= asset_path("tile.png") %>');">
-          <div class="card-trip">
-            <%= image_tag asset_path 'handshake.jpg'%>
+        <div class="ma-design p-5" style="background-image: url('<%= asset_path("tile.png") %>');">
+          <div class="card-trip p-6">
+            <%= image_tag asset_path 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'%>
             <h2>Customized to Your Taste</h2>
             <p>We assure your satisfaction with customized Day-1 orders!</p>
           </div>
         </div>
 
-        <div  class="ma-design" style="background-image: url('<%= asset_path("tile.png") %>');">
-          <div class="card-trip">
-            <%= image_tag asset_path 'community.jpg'%>
+        <div  class="ma-design p-5" style="background-image: url('<%= asset_path("tile.png") %>');">
+          <div class="card-trip p-6">
+            <%= image_tag asset_path 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'%>
             <h2>Large Community Of Sellers</h2>
             <p>Your demand will definitely be fulfilled, and even YOU can become a seller</p>
           </div>
@@ -75,19 +75,19 @@
 
   <section class="my-5">
     <div class="yellow-bg section">
-      <h2 class="numbers-title yellow-txt">Users</h2>
+      <h3 class="numbers-title yellow-txt">Best</h3>
         <div class="vector-container">
-          <%= image_tag asset_path 'community vector.jpg', class: "w-50"%>
+          <%= image_tag asset_path 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', class: "w-50"%>
         </div>
-      <h2 class="numbers">6 000 000</h2>
+      <h3 class="numbers">Seller</h3>
     </div>
 
     <div class="blue-bg section">
-      <h2 class="numbers-title blue-txt">Transactions</h2>
+      <h3 class="numbers-title blue-txt">100%</h3>
         <div class="vector-container">
-          <%= image_tag asset_path 'order food.jpg', class: "w-50"%>
+          <%= image_tag asset_path 'https://images.unsplash.com/photo-1549057188-efd70413345e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80', class: "w-50"%>
         </div>
-      <h2 class="numbers">120 000</h2>
+      <p class="numbers">Fait maison</p>
     </div>
   </section>
 
@@ -98,17 +98,27 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="carousel-bottom">
-              <%= image_tag asset_path 'authentic.jpg'%>
+              <%= image_tag asset_path 'https://images.unsplash.com/photo-1471646174523-327e108889e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80'%>
             </div>
           </div>
           <div class="carousel-item">
             <div class="carousel-bottom">
-              <%= image_tag asset_path 'authentic.jpg'%>
+              <%= image_tag asset_path 'https://images.unsplash.com/photo-1603777953733-c3f9b2533bf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'%>
             </div>
           </div>
           <div class="carousel-item">
             <div class="carousel-bottom">
-              <%= image_tag asset_path 'authentic.jpg'%>
+              <%= image_tag asset_path 'https://images.unsplash.com/photo-1603779702245-0bfe6bb1cd75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'%>
+            </div>
+          </div>
+           <div class="carousel-item">
+            <div class="carousel-bottom">
+              <%= image_tag asset_path 'https://images.unsplash.com/photo-1512684974096-473a769cde8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'%>
+            </div>
+          </div>
+           <div class="carousel-item">
+            <div class="carousel-bottom">
+              <%= image_tag asset_path 'https://images.unsplash.com/photo-1521931206836-2265cd656a5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80'%>
             </div>
           </div>
         </div>
@@ -126,13 +136,12 @@
 
 
   <section class="home-testimonial carousel-section">
-    <div class="container-fluid">
         <div class="row d-flex justify-content-center testimonial-pos">
             <div class="col-md-12 pt-4 d-flex justify-content-center">
-                <h3>Testimonials</h3>
+                <h1>Avis</h1>
             </div>
             <div class="col-md-12 d-flex justify-content-center">
-                <h2>Explore the clients' experiences</h2>
+                <h2>Explorez les expériences de nos clients</h2>
             </div>
         </div>
         <section class="home-testimonial-bottom">
@@ -141,33 +150,33 @@
                     <div class="col-md-4 style-3">
                         <div class="tour-item ">
                             <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">&ldquo;We, Khobz Dar, our mission is to empower anyone with a unique bread recipe to share his baked goods with the rest of the world.&rdquo;</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Student</div>
+                                <div class="tour-text color-grey-3 text-center">&ldquo;La mission principale de Khobz Dar est de donner à tout le monde l'opportunité de partager ses recettes de pain uniques avec le reste du monde.&rdquo;</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt=""></div>
+                                <div class="link-name d-flex justify-content-center">Assia</div>
+                                <div class="link-position d-flex justify-content-center">Étudiante</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 style-3">
                         <div class="tour-item ">
                             <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">&ldquo;We, Khobz Dar, our mission is to empower anyone with a unique bread recipe to share his baked goods with the rest of the world.&rdquo;</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Student</div>
+                                <div class="tour-text color-grey-3 text-center">&ldquo;Khobz Dar m'a permis de gagner des revenus complémentaires afin d'arrondir les fins de mois. C'est une bonne opportunité pour les étudiants de se faire un peu d'argent de poche pendant leur temps libre.&rdquo;</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80" alt=""></div>
+                                <div class="link-name d-flex justify-content-center">Ahmed</div>
+                                <div class="link-position d-flex justify-content-center">Étudiant</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 style-3">
                         <div class="tour-item ">
                             <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">&ldquo;We, Khobz Dar, our mission is to empower anyone with a unique bread recipe to share his baked goods with the rest of the world.&rdquo;</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Student</div>
+                                <div class="tour-text color-grey-3 text-center">&ldquo;Grâce a Khobz Dar, je n'ai plus besoin d'aller à la boulangerie quotidiennement, maintenant je peux en un seul clic commander du pain frais fait maison.&rdquo;</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""></div>
+                                <div class="link-name d-flex justify-content-center">Karima</div>
+                                <div class="link-position d-flex justify-content-center">Employée</div>
                             </div>
                         </div>
                     </div>
-                </div>
+
         </section>
   </section>

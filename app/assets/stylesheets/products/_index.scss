@@ -1,11 +1,17 @@
 @import "product";
 @import "modal";
 @import "show";
+@import "notifications";
+
+h1 #title {
+  color:#461111;
+  font-family: "Oswald";
+}
 
 
 h2 {
   color:#191919;
-  font-family: "Bebas Neue";
+  font-family: "Oswald";
 }
 
 p {
@@ -17,6 +23,11 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px 25px;
+}
+
+.card-trip {
+  border-radius: 15px 50px 30px;
+  background-color: #FDEEDC;
 }
 
 .centered {
@@ -51,7 +62,7 @@ $font: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
  width: $buttonWidth + 20px;
  height: $buttonHeight + 20px;
  perspective: 1800px;
- overflow: hidden;
+ overflow: scroll;
  display: flex;
  // justify-content: center;
  // align-items: center;
