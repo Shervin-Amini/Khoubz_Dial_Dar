@@ -2,7 +2,7 @@
 <div class="projcard-container">
   <div class="projcard projcard-blue">
     <div class="projcard-innerbox">
-      <img class="projcard-img" src="" />
+      <%= cl_image_tag @product.photo.key, class: "projcard-img", crop: :fill %>
       <div class="projcard-textbox" data-controller= "popup">
         <div class="projcard-title"><h1><%= @product.name %></h1></div>
         <div class="projcard-subtitle"><h2><%=@product.price %> MAD</h2></div>
