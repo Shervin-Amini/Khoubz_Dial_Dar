@@ -25,9 +25,7 @@ class ProductsController < ApplicationController
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
-    if current_user.is_seller
-      @product.seller_id = current_user.id
-    end
+    @product.seller_id = current_user.id
     respond_to do |format|
       if @product.save
         format.html { redirect_to mes_recettes_path, notice: "Product was successfully created." }
