@@ -1,2 +1,22 @@
 // .order-display {
 // }
+
+
+  #orders {
+  border:1px solid #b3adad;
+  border-collapse:collapse;
+  padding:5px;
+}
+#orders th {
+  border:1px solid #b3adad;
+  padding:5px;
+  background: #ffffff;
+  color: #ff8306;
+}
+#orders td {
+  border:1px solid #b3adad;
+  text-align:center;
+  padding:5px;
+  background: #ffffff;
+  color: #000000;
+ }

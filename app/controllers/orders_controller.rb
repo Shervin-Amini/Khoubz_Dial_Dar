@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
 
   # GET /orders or /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.all.order(id: :desc)
     @users = User.all
     @products = Product.all
   end
@@ -14,7 +14,6 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-
     @order = Order.new
   end
 

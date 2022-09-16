@@ -1,11 +1,10 @@
-<br>
-<div>
-  <strong><h3>Profil du vendeur :</h3></strong>
-  <%# order.user_id %>
-  <br>
-  <p><strong>Quantité:</strong> <%= order.quantity %></p>
-  <p><strong>Message de personnalisation:</strong> <%= order.customization_message %></p>
-  <p><strong>Nom complet:</strong> <%= @users.find(@products.find(order.product_id).seller_id).name %></p>
-  <p><strong>Numéro de téléphone:</strong> <%= @users.find(@products.find(order.product_id).seller_id).phone_number %></p>
-  <p><strong>Email:</strong> <%= @users.find(@products.find(order.product_id).seller_id).email %></p>
-</div>
+
+  <tr>
+    <td>
+    Nom : <%=  @users.find(@products.find(order.product_id).seller_id).name %> <br/>
+    Tel : <%=   @users.find(@products.find(order.product_id).seller_id).phone_number %> <br/>
+    Email :<%=  @users.find(@products.find(order.product_id).seller_id).email %></td>
+    <td> <%= order.customization_message %></td>
+    <td><%= order.quantity %></td>
+    <td> <%= order.status %></td>
+  </tr>

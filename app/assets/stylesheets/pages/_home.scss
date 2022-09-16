@@ -103,10 +103,6 @@ body {
     text-decoration-color: #E67E22;
   }
 
-  .secondary-sentence {
-    margin-left: 150px;
-  }
-
   .relative {
     position: relative;
   }
@@ -232,7 +228,6 @@ body {
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-right: auto;
-    margin-left: 150px;
 }
 
 .magrid {
@@ -244,5 +239,12 @@ body {
 
 .ma-design {
   height: 500px;
-  width: 500px;
+  width: 400px;
+}
+
+.container-carousel {
+  max-height: 80vh !important;
+  div{
+    max-height: 80vh !important;
+  }
 }
