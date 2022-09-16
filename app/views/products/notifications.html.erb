@@ -25,7 +25,7 @@
           <div class="infos">
             <p> <%= product.price %> MAD <i class="fa-solid fa-tag"></i></p>
             <span> <i class="fa-solid fa-sack-dollar"></i> <%=  product.orders.where("status ilike 'Delivered'").count %> pièce(s) Vendus</span>
-            <span><i class="fa-regular fa-clock"></i> <%= product.orders.where("status ilike 'unDelivered'").count %> pièce(s) en attente</span>
+            <span><i class="fa-regular fa-clock"></i> <%= product.orders.where("status ilike 'unDelivered' OR status ilike 'pending'").count %> pièce(s) en attente</span>
           </div>
         </div>
       </div>
