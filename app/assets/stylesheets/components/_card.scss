@@ -57,9 +57,33 @@
     right: 16px;
     top: -20px;
     width: 40px;
+    height: 40px;
   }
 
   .card-trip-pricing {
     padding-bottom: 50px;
   }
-
+.add-product {
+  position: relative;
+  background-color: #999;
+  transform: scale(1);
+  transition: all .4s ease-in-out;
+  &:hover{
+    transform: scale(1.05);
+  }
+  img {
+    opacity: .5;
+  }
+  h2 {
+    margin-top: 32px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.4em;
+  }
+  span {
+    position: absolute;
+    top: 56px;
+    right:120px;
+    font-size: 10em;
+    color: #00000044;
+  }
+}

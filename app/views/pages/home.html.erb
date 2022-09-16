@@ -1,6 +1,6 @@
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon-transparent fixed-top" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
     <div class="container-fluid">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to "/", class: "navbar-brand" do %>
         <%= image_tag asset_path 'KHOBZ Logo.png' %>
       <% end %>
 
@@ -12,15 +12,15 @@
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
             <li class="nav-item active">
-              <%= link_to "Home","http://localhost:3000", class: "text-warning pe-3 nav-link" %>
+              <%= link_to "Home",root_path, class: "text-warning pe-3 nav-link" %>
               </li>
               <li class="nav-item active">
-              <%= link_to "Notifications", "http://localhost:3000/mes-notifications", class: "text-warning pe-5 nav-link" %>
+              <%= link_to "Notifications", "/mes-notifications", class: "text-warning pe-5 nav-link" %>
             </li>
             <li class="nav-item dropdown">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/Adam-Aber", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="gold-background dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Mes recettes", "http://localhost:3000/mes-recettes", class: "gold-background dropdown-item" %>                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "gold-background dropdown-item" %>
+                <%= link_to "Mes recettes", "/mes-recettes", class: "gold-background dropdown-item" %> <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "gold-background dropdown-item" %>
               </div>
             </li>
           <% else %>
@@ -46,27 +46,28 @@
   <section>
       <div class="magrid ms-4">
 
-        <div class="ma-design p-5" style="background-image: url('<%= asset_path("tile.png") %>');">
+        <div class="ma-design p-2" style="background-image: url('<%= asset_path("tile.png") %>');background-position: center;background-size: contain;background-repeat: no-repeat;">
           <div class="card-trip p-6">
               <%= image_tag asset_path 'authentic.jpg'%>
-              <h2>Traditional Authentic Experience</h2>
-              <p>We connect you with homemade bread makers and their unique recipes</p>
+              <h2>Une expérience traditionnelle authentique</h2>
+              <p>Achetez du pain fait maison et personnalisez le à votre goût.</p>
             </div>
         </div>
 
-        <div class="ma-design p-5" style="background-image: url('<%= asset_path("tile.png") %>');">
+        <div class="ma-design p-2" style="background-image: url('<%= asset_path("tile.png") %>');background-position: center;background-size: contain;background-repeat: no-repeat;">
           <div class="card-trip p-6">
             <%= image_tag asset_path 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'%>
-            <h2>Customized to Your Taste</h2>
-            <p>We assure your satisfaction with customized Day-1 orders!</p>
+            <h2>Personnalisé à votre goût</h2>
+            <p>Nous assurons votre satisfaction avec les commandes personnalisées faîtes un jour à l'avance !</p>
           </div>
         </div>
 
-        <div  class="ma-design p-5" style="background-image: url('<%= asset_path("tile.png") %>');">
+        <div class="ma-design p-2" style="background-image: url('<%= asset_path("tile.png") %>');background-position: center;background-size: contain;background-repeat: no-repeat;">
           <div class="card-trip p-6">
             <%= image_tag asset_path 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'%>
-            <h2>Large Community Of Sellers</h2>
-            <p>Your demand will definitely be fulfilled, and even YOU can become a seller</p>
+            <h2>Une grande communauté de vendeurs</h2>
+            <br>
+            <p>Même VOUS vous pouvez devenir vendeur.</p>
           </div>
         </div>
 

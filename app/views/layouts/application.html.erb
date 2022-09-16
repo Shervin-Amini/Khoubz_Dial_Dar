@@ -13,7 +13,9 @@
   <body>
     <%= render "shared/navbar" unless @disable_nav%>
     <%= render "shared/flashes" %>
-    <%= yield %>
+    <div class="<%= !current_page?(root_path) ? 'mymain-wrapper' : ''%>">
+      <%= yield %>
+    </div>
     <%= render "shared/footer" %>
     <script src="https://kit.fontawesome.com/2340d02f64.js" crossorigin="anonymous"></script>
   </body>

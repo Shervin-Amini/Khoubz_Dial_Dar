@@ -1,9 +1,9 @@
-<h1>New product</h1>
-<br>
-<br>
-<%= render "form", product: @product, method: "post" %>
-<div>
-<br>
-<br>
-  <%= link_to "Retour", mes_recettes_path, class:"btn-flat-sm-i text-decoration-none align-self-center" %>
+<div class="container form-wrapper" >
+  <%= link_to " < Retour", mes_recettes_path, class:" text-decoration-none" %>
+  <h1>Nouvelle recette</h1>
+  <br>
+  <br>
+  <%= render "form", product: @product, method: "post" %>
+  <br>
+  <br>
 </div>

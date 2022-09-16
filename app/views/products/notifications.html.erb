@@ -12,7 +12,7 @@
       <%# added the line above so that the whole card becomes clickable %>
     <%= link_to product_path(product) do %>
       <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1586765501019-cbe3973ef8fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80">
+        <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-product-infos">
          <div class="details">
           <h2><%= product.name %></h2>
@@ -20,8 +20,8 @@
          </div>
           <div class="infos">
             <p> <%= product.price %> MAD <i class="fa-solid fa-tag"></i></p>
-            <span> <i class="fa-solid fa-sack-dollar"></i> <%=  product.orders.where(status: "delivered").count %> pièce(s) Vendus</span>
-            <span><i class="fa-regular fa-clock"></i> <%= product.orders.where(status: "Undelivered").count %> pièce(s) en attente</span>
+            <span> <i class="fa-solid fa-sack-dollar"></i> <%=  product.orders.where("status ilike 'Delivered'").count %> pièce(s) Vendus</span>
+            <span><i class="fa-regular fa-clock"></i> <%= product.orders.where("status ilike 'unDelivered'").count %> pièce(s) en attente</span>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne<%= product.id %>" aria-expanded="false" aria-controls="collapseOne<%= product.id %>">
-            Détails de commandes
+            Détails de commandes ( <%= product.orders.count %> )
           </button>
         </h2>
         <div id="collapseOne<%= product.id %>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">

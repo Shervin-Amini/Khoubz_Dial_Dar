@@ -4,6 +4,11 @@ body {
   font-size: 14px;
 }
  #show {
+  i{
+    border: 1px solid gray;
+    padding: 8px 16px;
+    font-size: 1.2em;
+  }
  .projcard-container {
   margin: 50px 0;
  }
@@ -17,6 +22,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 1000px;
+  position: relative;
 }
 .projcard {
   position: relative;
@@ -28,7 +34,6 @@ body {
   border: 2px solid #ddd;
   font-size: 18px;
   overflow: hidden;
-  cursor: pointer;
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -63,6 +68,7 @@ body {
   top: 0;
   left: 0;
   transition: transform 0.2s ease;
+  object-fit: cover;
 }
 .projcard:nth-child(2n) .projcard-img {
   left: initial;

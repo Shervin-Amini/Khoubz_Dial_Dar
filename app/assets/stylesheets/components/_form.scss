@@ -1,0 +1,43 @@
+.form-wrapper{
+  background-image: url('https://images.unsplash.com/photo-1629036850786-e8ae00d91501?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: fit-content;
+  position: relative;
+  a {
+    position: absolute;
+    background-color: #FFFFFF55;
+    color: black;
+    font-size: 1.2em;
+    top: 148px;
+    padding: 12px 32px;
+    left:32px;
+    transition: all .3 ease-in-out;
+    &:hover {
+      background-color: #ad5406;
+      color: white;
+      font-weight: 800;
+    }
+  }
+  h1 {
+    text-shadow: 5px 5px 5px #00000055;
+    text-align: center;
+  }
+  form {
+    border-radius: 8px;
+    padding: 32px;
+    margin: 16px 64px;
+    background-color: rgba(256,256,256,.6);
+    .form-actions {
+      text-align: center;
+    }
+    input[type='submit'] {
+      background-color: #E67E22;
+      font-size: 1.3em;
+      font-weight: 500;
+      padding: 12px 32px;
+      border: 0;
+    }
+  }
+}
