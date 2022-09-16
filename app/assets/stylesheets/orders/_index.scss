@@ -3,15 +3,16 @@
 
 
   #orders {
-  border:1px solid #b3adad;
-  border-collapse:collapse;
-  padding:5px;
-  width:100%;
+    border:1px solid #b3adad;
+    border-collapse:collapse;
+    padding:5px;
+    width:100%;
 }
 #orders th {
   border:1px solid #b3adad;
   padding:5px;
   background: #ffffff;
+  text-align:center;
   color: #ff8306;
 }
 #orders td {
@@ -20,4 +21,19 @@
   padding:5px;
   background: #ffffff;
   color: #000000;
+  span {
+    padding: 8px 16px;
+    color:black;
+    font-size: large;
+    border-radius: 8px;
+    &.delivered {
+      background-color: lightgreen;
+    }
+    &.undelivered{
+      background-color: lightcoral;
+    }
+    &.pending {
+      background-color: lightgoldenrodyellow;
+    }
  }
+}

@@ -6,5 +6,7 @@
     Email :<%=  @users.find(@products.find(order.product_id).seller_id).email %></td>
     <td> <%= order.customization_message %></td>
     <td><%= order.quantity %></td>
-    <td> <%= order.status %></td>
+    <td>
+      <span class="<%= order.status.downcase %>"><%= order.status %></span>
+    </td>
   </tr>
