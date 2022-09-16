@@ -12,7 +12,11 @@
       <%# added the line above so that the whole card becomes clickable %>
     <%= link_to product_path(product) do %>
       <div class="card-product">
-        <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
+        <% if product.photo.attached? %>
+          <%= cl_image_tag, height: 300, width: 400, crop: :fill %>
+        <% else %>
+          <%= cl_image_tag "https://tasteofmaroc.com/wp-content/uploads/2017/08/batbout-2-edit2.jpg", height: 300, width: 400, crop: :fill %>
+        <% end %>
         <div class="card-product-infos">
          <div class="details">
           <h2><%= product.name %></h2>

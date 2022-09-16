@@ -2,7 +2,11 @@
 <div class="projcard-container">
   <div class="projcard projcard-blue">
     <div class="projcard-innerbox">
-      <%= cl_image_tag @product.photo.key, class: "projcard-img", crop: :fill %>
+      <% if product.photo.attached? %>
+        <%= cl_image_tag @product.photo.key , class: "projcard-img", crop: :fill %>
+      <% else %>
+        <%= cl_image_tag "https://tasteofmaroc.com/wp-content/uploads/2017/08/batbout-2-edit2.jpg", class: "projcard-img", crop: :fill %>
+      <% end %>
       <div class="projcard-textbox" data-controller= "popup">
         <div class="projcard-title"><h1><%= @product.name %></h1></div>
         <div class="projcard-subtitle"><h2><%=@product.price %> MAD</h2></div>

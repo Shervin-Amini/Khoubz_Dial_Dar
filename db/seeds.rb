@@ -10,6 +10,7 @@ require "open-uri"
 p "Deleting old seed"
 Product.destroy_all
 User.destroy_all
+Order.destroy_all
 
 produits = ["https://images.unsplash.com/photo-1598373182308-3270495d2f58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
  "https://images.unsplash.com/photo-1586765501019-cbe3973ef8fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80",

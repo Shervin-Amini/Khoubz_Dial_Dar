@@ -10,7 +10,11 @@
         <%# added the line above so that the whole card becomes clickable %>
           <div class="products" style="text-decoration:none" >
               <div class="card-trip">
-               <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
+                <% if product.photo.attached? %>
+                  <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
+                <% else %>
+                  <%= cl_image_tag "https://tasteofmaroc.com/wp-content/uploads/2017/08/batbout-2-edit2.jpg", class: "projcard-img", crop: :fill %>
+                <% end %>
                 <div class="card-trip-infos">
                  <%= cl_image_tag product.seller.photo.key, class:"card-trip-user avatar-bordered"  %>
                 </div>
