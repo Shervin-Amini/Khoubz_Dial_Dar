@@ -2,7 +2,7 @@
 <div class="projcard-container">
   <div class="projcard projcard-blue">
     <div class="projcard-innerbox">
-      <% if product.photo.attached? %>
+      <% if @product.photo.attached? %>
         <%= cl_image_tag @product.photo.key , class: "projcard-img", crop: :fill %>
       <% else %>
         <%= cl_image_tag "https://tasteofmaroc.com/wp-content/uploads/2017/08/batbout-2-edit2.jpg", class: "projcard-img", crop: :fill %>
